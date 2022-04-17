@@ -4,7 +4,7 @@ const Keyboard = ({ setCalculation, setFullSum, fullSum, calculation }) => {
       clearKey();
     } else if (
       (value === 0 && fullSum.length === 0) ||
-      (typeof value !== 'number' && fullSum.length === 0)
+      (typeof value !== "number" && fullSum.length === 0)
     ) {
       return fullSum;
     } else {
@@ -13,10 +13,10 @@ const Keyboard = ({ setCalculation, setFullSum, fullSum, calculation }) => {
       });
     }
   };
+
   const clearKey = () => {
     setFullSum(() => {
       const newArr = [];
-
       return newArr;
     });
     setCalculation(() => {
@@ -34,174 +34,174 @@ const Keyboard = ({ setCalculation, setFullSum, fullSum, calculation }) => {
 
   const equalsKey = () => {
     setCalculation(() => {
-      let string = fullSum.join('');
+      let string = fullSum.join("");
       return eval(string);
     });
   };
 
   return (
-    <form className="keyboard">
-      <button
-        id="delete"
-        onClick={(event) => {
-          event.preventDefault();
-          deleteKey();
-        }}
-      >
-        Del
-      </button>
-      <br></br>
+    <form
+      className="keyboard"
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
       <button
         id="one"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(1);
         }}
       >
         1
       </button>
+
       <button
         id="two"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(2);
         }}
       >
         2
       </button>
+
       <button
         id="three"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(3);
         }}
       >
         3
       </button>
+
       <button
         id="divide"
-        onClick={(event) => {
-          event.preventDefault();
-          numKey('/');
+        onClick={() => {
+          numKey("/");
         }}
       >
         %
       </button>
+
+      <button
+        id="delete"
+        onClick={() => {
+          deleteKey();
+        }}
+      >
+        Del
+      </button>
+
       <button
         id="four"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(4);
         }}
       >
         4
       </button>
+
       <button
         id="five"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(5);
         }}
       >
         5
       </button>
+
       <button
         id="six"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(6);
         }}
       >
         6
       </button>
+
       <button
         id="multiply"
-        onClick={(event) => {
-          event.preventDefault();
-          numKey('*');
+        onClick={() => {
+          numKey("*");
         }}
       >
         *
       </button>
-      <br></br>
+
       <button
         id="seven"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(7);
         }}
       >
         7
       </button>
+
       <button
         id="eight"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(8);
         }}
       >
         8
       </button>
+
       <button
         id="nine"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(9);
         }}
       >
         9
       </button>
+
       <button
         id="minus"
-        onClick={(event) => {
-          event.preventDefault();
-          numKey('-');
+        onClick={() => {
+          numKey("-");
         }}
       >
         -
       </button>
-      <br></br>
+
       <button
         id="clear"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           clearKey();
         }}
       >
-        clear
+        C
       </button>
+
       <button
         id="zero"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           numKey(0);
         }}
       >
         0
       </button>
+
       <button
         id="point"
-        onClick={(event) => {
-          event.preventDefault();
-          numKey('.');
+        onClick={() => {
+          numKey(".");
         }}
       >
         .
       </button>
+
       <button
         id="plus"
-        onClick={(event) => {
-          event.preventDefault();
-          numKey('+');
+        onClick={() => {
+          numKey("+");
         }}
       >
         +
       </button>
-      <br></br>
+
       <button
         id="equals"
-        onClick={(event) => {
-          event.preventDefault();
+        onClick={() => {
           equalsKey();
         }}
       >

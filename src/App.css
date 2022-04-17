@@ -12,8 +12,9 @@
   width: 400px;
   height: 600px;
   margin: auto;
-  padding: 20px;
+  padding: 13.33px;
   background-color: #163041;
+  margin-bottom: 20px;
 }
 
 .output {
@@ -36,28 +37,47 @@
 .keyboard {
   padding: 5px;
   height: 380px;
+  width: 390px;
+  display: grid;
+  margin-top: 13.33px;
+  grid-template-columns: 5;
+  grid-template-rows: 4;
+  grid-template-areas:
+    "1 2 3 div del"
+    "4 5 6 mul del"
+    "7 8 9 minus equ"
+    "cl 0 point plus equ";
 }
 
 .keyboard button {
-  width: 25%;
-  height: 68px;
   margin-top: 0;
   background-color: #bdcbbf;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 40px;
   font-weight: bold;
   padding: auto;
   border-radius: 7px;
+  width: 78px;
 }
 
 #delete {
+  grid-area: del;
   border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  width: 100%;
 }
 
 #equals {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   width: 100%;
+  grid-area: equ;
+}
+
+#one {
+  border-top-left-radius: 20px;
+}
+
+#clear {
+  border-bottom-left-radius: 20px;
+}
+
+#equals {
+  border-bottom-right-radius: 20px;
 }
