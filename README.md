@@ -29,4 +29,5 @@ https://www.javascriptstuff.com/tiny-unique-app/
 
 you should now have the app up and running.
 
-![The React-ulator up and running!](/public/Reactulator.png 'The react-ulator')
+<img width="1440" alt="Screenshot 2022-04-17 at 19 03 10" src="https://user-images.githubusercontent.com/98897275/163726917-e51a49b6-352d-4d88-bb8f-95f7b737de6b.png">
+
